@@ -44,8 +44,7 @@ h1{
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: relative; 
-    text-align: center
-    ;  
+    text-align: center;  
    
 }
 img{
@@ -86,14 +85,18 @@ ol{
 }
 
 .container {
-    position: relative;
-    left: 25%;
+   display: flex;
+   align-items: center;
+    
+    
+   
+    
     
 
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 0% 80% 0%;
+    grid-template-columns: 25% 50% 25%;
     grid-template-areas:
       "header header header"
       "left main right"
@@ -112,11 +115,20 @@ ol{
   
   .left {
     grid-area: left;
+    display: grid;
+    align-content: center;
+    place-content: center;
+   /*  position: relative;
+    right: 2%;
+    top: 10%; */
+    
   }
   
   .main {
     padding:5rem;
     grid-area: main;
+    align-items: center;
+    place-content: center;
     color: black;
     font-family: 'Times New Roman', Times, serif;
     padding-bottom: 10vh;
@@ -125,6 +137,11 @@ ol{
   
   .right {
     grid-area: right;
+    display: grid;
+    align-content: center;
+    place-content: center;
+    /* left: 2%;
+    top: 20%; */
   }
   
   .footer {
@@ -160,15 +177,15 @@ ol{
    position: relative;
     color:white;  
     background-color: black;
-    padding:3vh;
-    padding-bottom: 3vh;
+    padding: 20px;
     width: 350px;
     height:425px;
     opacity: 95%;
     box-shadow: 15px 15px #373737;
-    flex-direction: column;
+    margin-bottom: 20px;
     margin-left: 30px;
     margin-top: 20px;
+   
 }
 
 label{
@@ -192,6 +209,7 @@ textarea{
 button{
     
     position: relative;
+    bottom: -10px;
     right: -40%;
     background-color: black;
     color:red;
@@ -209,6 +227,7 @@ body{
     min-height: 100vh;
     background: url(inlämningsbilder/bakgrund.jpg);
     background-size: cover;
+    width: 100%;
  }
 
  .logo{
@@ -217,7 +236,7 @@ body{
      left: 1%;  
      color:whitesmoke;
      text-shadow: 2px 2px 4px #000000;
-     font-size: 1.5rem;
+     font-size: 2.5rem;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      padding: 0.5rem;
      opacity: 65%;
@@ -236,23 +255,21 @@ body{
 }
 
 @media (max-width: 800px) {
-    .container {
-      flex-direction: column; 
+    .container{
+        flex-direction: column;
+    }
     
-    } 
-    .logo{
-        font-size: 2.5rem;
-        }  
-}
+    }
+
   @media screen and (min-width: 375px) {
 
     .container{
         display: flex;      
         align-items: center;
-        align-content: space-between;      
-   
+        align-content: space-between;
+        align-content: center;
+        place-content: center;    
     }
-    .logo{
-    font-size: 1.5rem;
+    
     }
-}     
+     
