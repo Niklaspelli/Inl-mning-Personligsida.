@@ -11,13 +11,13 @@ a{
     font-size: large;
     border:black;
     border-radius: 10%;
-    padding: 8px;
+    padding: 5px;
     outline: 2px black;
     transition:  250ms ease;
 }
 a:hover{
     background: #000000;
-    box-shadow: 0 0 5px 3px rgba(147, 9, 9, 0.5);
+    box-shadow: 0 0 4px 3px rgba(147, 9, 9, 0.5);
     color: white;
 }  
 
@@ -32,11 +32,11 @@ li{
 ul{
     display:flex;
     position: fixed;
-    top: 3%;
-    right: 3%;
+    
+    right: 10px;
     width: 100%;
     max-width: max-content;
-    height: 1.5rem;
+    height: 1rem;
     
 }
 h1{
@@ -46,11 +46,9 @@ h1{
     padding-top: 10px;
     padding-bottom: 1rem;
     display: relative; 
-    text-align: center; 
-
-   
+    text-align: center;  
 }
-img{
+.start-bild, .kontakt-bild {
     max-width: 320px;
     border: 3px solid black;
     box-shadow: 10px 10px #000000;
@@ -88,22 +86,30 @@ ol{
     align-items: center;
 }
 
-.container {
+.container{
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, 330px);
   align-items: center;
    
 }
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-areas:
-      "header header header"
-      "left main right"
-      "footer footer footer";
-  }
-   */
+
+.container-galleri { 
+    gap: 3rem;
+    display: grid;  
+    grid-template-columns:
+    repeat(auto-fit,minmax(330px, 3fr));
+ 
+}
+
+.image-gallery{
+    max-width: 320px;
+    height: 250px;
+    border: 3px solid black;
+    box-shadow: 10px 10px #000000;
+    flex-direction: row;
+
+}
   .header {
     grid-area: header;
     position: fixed;
@@ -119,10 +125,7 @@ ol{
     display: grid;
     align-content: center;
     place-content: center;
-  /*  /*  position: relative;
-    right: 2%;
-    top: 10%; */
-     */
+   
   }
   
   .main {
@@ -135,15 +138,9 @@ ol{
     padding-bottom: 10vh;
     width: 100%;
   }
-  
-  /* .right {
-    grid-area: right;
-    display: grid;
-    align-content: center;
-    place-content: center;
-  } */
-  
+
   .footer {
+    
     grid-area: footer;
     bottom: 0;
     position: fixed;
@@ -179,7 +176,23 @@ ol{
     height:430px;
     opacity: 95%;
     box-shadow: 15px 15px #373737;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.card-galleri{
+    width: 320px;
+    height:150px;
+    position: relative;
+    color:white;  
+    background-color: black;
+    padding: 20px;
+    opacity: 95%;
+    box-shadow: 15px 15px #373737;
+    margin-bottom: 40px;
+    text-align: center;
+   
+   
+
 }
 .mitten-text{
     font-size: large;
@@ -255,20 +268,30 @@ body{
     }
 }
 
+
 @media (min-width: 800px) {
-   
-   
     .logo{
         font-size: 2.5rem;
+    }   
+    ul{
+        top: 6%;
     }
-    }
+   
+}
 
   @media screen and (min-width: 375px) {
 
     .container{
         place-content: center;  
+    }
+
+    .container-galleri{
        
-        
+        place-content: center;
+    }
+    ul{
+        top: 6%;
     }
     }
+    
      
