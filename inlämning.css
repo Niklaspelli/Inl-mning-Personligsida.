@@ -48,7 +48,7 @@ h1{
     display: relative; 
     text-align: center;  
 }
-.start-bild, .kontakt-bild {
+.start-bild, .kontakt-bild {    /* Här har jag optimerat koden! */
     max-width: 320px;
     border: 3px solid black;
     box-shadow: 10px 10px #000000;
@@ -121,13 +121,6 @@ ol{
     z-index: 2;
   }
   
-  .left {
-    grid-area: left;
-    display: grid;
-    align-content: center;
-    place-content: center;
-   
-  }
   
   .main {
     padding:5rem;
@@ -152,48 +145,36 @@ ol{
     scroll-padding-block-end: 100%;
   }
   
-
-  .card-bg{
+.card, .card-bg, .card-bg-kontakt, .card-galleri {   /* Här har jag optimerat koden till alla cards! */
     color:white;
     position:relative;
     top: 0;
     background-color: black;
     padding: 20px;
-    width: 320px;
-    height:355px;
     opacity: 95%;
     box-shadow: 15px 15px #373737;
+
+}
+  .card-bg{
+    
+    width: 320px;
+    height:365px;
     animation-name: slideInLeft;
     animation-duration: 1s;
-    margin-bottom: 20px; 
+    margin: 0; 
     
 }
 .card-bg-kontakt{
-   position: relative;
-    color:white;  
-    background-color: black;
-    padding: 20px;
     width: 330px;
     height:430px;
-    opacity: 95%;
-    box-shadow: 15px 15px #373737;
     margin-bottom: 20px;
 }
 
 .card-galleri{
     width: 320px;
     height:150px;
-    position: relative;
-    color:white;  
-    background-color: black;
-    padding: 20px;
-    opacity: 95%;
-    box-shadow: 15px 15px #373737;
-    margin-bottom: 40px;
     text-align: center;
-   
-   
-
+    margin-bottom: 20px;
 }
 .mitten-text{
     font-size: large;
@@ -268,9 +249,19 @@ body{
         transform: translateX(0)
     }
 }
+@media screen and (min-width: 1000px) {
+  
+    .header{
+        height: 4.5rem;
+        
+    }
+    .main{
+        margin-top: 30px;
+    
+    }
+}
 
-
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
     .logo{
         font-size: 2.5rem;
     }   
@@ -288,8 +279,5 @@ body{
     }
     ul{
         top: 5%;
-    }
-    
-    }
-    
-     
+    }   
+    }  
