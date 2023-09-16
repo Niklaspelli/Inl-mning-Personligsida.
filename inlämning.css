@@ -32,7 +32,7 @@ li{
 ul{
     display:flex;
     position: fixed;
-    
+    top: 4%;
     right: 10px;
     width: 100%;
     max-width: max-content;
@@ -98,18 +98,19 @@ ol{
     gap: 3rem;
     display: grid;  
     grid-template-columns:
-    repeat(auto-fit,minmax(330px, 3fr));
+    repeat(auto-fit,minmax(400px, 3fr));
  
 }
 
 .image-gallery{
-    max-width: 320px;
-    height: 250px;
-    border: 3px solid black;
+    max-width: 400px;
+    height: 300px;
+    border: 2px solid black;
     box-shadow: 10px 10px #000000;
-    flex-direction: row;
+    
 
 }
+
   .header {
     grid-area: header;
     position: fixed;
@@ -273,10 +274,6 @@ body{
     .logo{
         font-size: 2.5rem;
     }   
-    ul{
-        top: 6%;
-    }
-   
 }
 
   @media screen and (min-width: 375px) {
@@ -290,8 +287,9 @@ body{
         place-content: center;
     }
     ul{
-        top: 6%;
+        top: 5%;
     }
+    
     }
     
      
