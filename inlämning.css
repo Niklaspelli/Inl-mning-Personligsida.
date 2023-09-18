@@ -51,10 +51,9 @@ h1{
 .start-bild, .kontakt-bild {    /* Här har jag optimerat koden! */
     max-width: 320px;
     border: 3px solid black;
-    box-shadow: 10px 10px #000000;
-    
+    box-shadow: 10px 10px #000000; 
+    border-radius: 5%;  
 }
-
 .fa-brands{
     font-size:3rem; 
     text-align: center;
@@ -62,17 +61,14 @@ h1{
 }
 .fa-brands:hover{
     box-shadow: 0 0 5px 3px rgba(147, 9, 9, 0.5);
+    transform:scale(1.2);                              /* Här har jag lagt en liten hover-förstorning på ikonerna */
 }
 .fontawesome{
-    
-    text-align: center;
-    
+    text-align: center;  
 }
-
 p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:white; 
-         
+    color:white;          
 }
 p::first-letter{
     font-size: 1.5rem;
@@ -85,33 +81,30 @@ ol{
     text-align: center;
     align-items: center;
 }
-
 .container{
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, 330px);
-  align-items: center;
-   
+  align-items: center;   
 }
-
 .container-galleri { 
-    gap: 3rem;
+    gap: 1rem;
     display: grid;  
     grid-template-columns:
-    repeat(auto-fit,minmax(400px, 3fr));
- 
+    repeat(auto-fit,minmax(350px, 3fr)); 
 }
-
 .image-gallery{
-    max-width: 400px;
-    height: 300px;
+    max-width: 350px;
+    height: 280px;
     border: 2px solid black;
     box-shadow: 10px 10px #000000;
-    
-
+    border-radius: 5%;  
+    margin-bottom: 10px;
 }
-
-  .header {
+.image-gallery:hover {
+    transform: scale(1.2);
+}
+ .header {
     grid-area: header;
     position: fixed;
     top:0;  
@@ -119,9 +112,8 @@ ol{
     height: 4rem;
     background-color: rgb(56, 51, 51);
     z-index: 2;
+    margin-bottom: 50px;
   }
-  
-  
   .main {
     padding:5rem;
     grid-area: main;
@@ -132,14 +124,13 @@ ol{
     padding-bottom: 10vh;
     width: 100%;
   }
-
-  .footer {
-    
+.footer {
     grid-area: footer;
     bottom: 0;
     position: fixed;
     height: 4rem;
     margin: 0;
+    margin-top: 40px;
     width: 100%;
     background-color: rgb(56, 51, 51);;
     scroll-padding-block-end: 100%;
@@ -153,23 +144,20 @@ ol{
     padding: 20px;
     opacity: 95%;
     box-shadow: 15px 15px #373737;
-
 }
   .card-bg{
-    
     width: 320px;
     height:365px;
     animation-name: slideInLeft;
     animation-duration: 1s;
-    margin: 0; 
-    
+    margin: 0;  
+    margin-bottom: 10px;
 }
 .card-bg-kontakt{
     width: 330px;
     height:430px;
     margin-bottom: 20px;
 }
-
 .card-galleri{
     width: 320px;
     height:150px;
@@ -180,7 +168,6 @@ ol{
     font-size: large;
     text-align: center;
 }
-
 label{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:white; 
@@ -189,18 +176,17 @@ label{
 input{
     height: 20px;
     background-color: whitesmoke;
+    border: none;
 } 
-
 textarea{
     width:300px;
     box-sizing: border-box;
     resize: none;
     height: 100px;
     background-color: whitesmoke;
+    border: none;
 }
-
 button{
-    
     position: relative;
     bottom: -10px;
     right: -40%;
@@ -225,7 +211,6 @@ body{
     background-size: cover;
     width: 100%;
  }
-
  .logo{
     position: fixed;
     top:0;
@@ -240,7 +225,6 @@ body{
      animation-duration: 1s;   
      pointer-events: none;
  }
-
  @keyframes slideInLeft {
     from {
         transform: translateX(-300px)       
@@ -252,7 +236,7 @@ body{
 @media screen and (min-width: 1000px) {
   
     .header{
-        height: 4.5rem;
+        height: 5rem;
         
     }
     .main{
@@ -267,7 +251,7 @@ body{
     }   
 }
 
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 360px) {
 
     .container{
         place-content: center;  
@@ -281,3 +265,4 @@ body{
         top: 5%;
     }   
     }  
+    
