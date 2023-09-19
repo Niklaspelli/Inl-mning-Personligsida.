@@ -111,7 +111,7 @@ ol{
     position: fixed;
     top:0;  
     width:100%;
-    height: 5rem;
+    height: 3rem;
     background-color: rgb(56, 51, 51);
     z-index: 2;
     margin-bottom: 50px;
@@ -243,23 +243,23 @@ body{
 @media screen and (max-width: 900px) {
   
     .header{
-        height: 3.5rem;
+        height: 5rem;
     
     }
     .logo{
         font-size: 1.5rem;
    
     }
-    a{
-        font-size:smaller;
-    
-    }  
+      
+    ul{
+        top: 5%;
+    }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
     
     .header{
-        height: 4.5rem;
+        height: 5.5rem;
     
     }
     .logo{
@@ -290,6 +290,7 @@ body{
         place-content: center;
     }
     ul{
-        top: 4.5%;
+        top: 6%;
     }
+    
 }
