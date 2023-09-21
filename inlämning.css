@@ -14,6 +14,7 @@ a{
     padding: 5px;
     outline: 2px black;
     transition:  250ms ease;
+   
 }
 a:hover{
     background: #000000;
@@ -34,8 +35,7 @@ ul{
     position: fixed;
     top: 5.2%;
     right: 10px;
-    width: 100%;
-    max-width: max-content;
+    max-width: 100%;
     height: 1rem;
     
 }
@@ -240,7 +240,7 @@ body{
         transform: translateX(0)
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 912px) {
   
     .header{
         height: 5rem;
@@ -252,7 +252,10 @@ body{
     }
       
     ul{
-        top: 5%;
+        top: 4%;
+    }
+    .image-gallery:hover {
+        transform: none;
     }
 }
 
@@ -291,6 +294,5 @@ body{
     }
     ul{
         top: 6%;
-    }
-    
+    } 
 }
