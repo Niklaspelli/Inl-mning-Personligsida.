@@ -45,7 +45,6 @@ h1{
     font-size: 3rem;
     padding-top: 10px;
     padding-bottom: 1rem;
-    display: relative; 
     text-align: center;  
 }
 .start-bild, .kontakt-bild {    /* Här har jag optimerat koden! */
